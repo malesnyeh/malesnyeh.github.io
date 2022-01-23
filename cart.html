@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dabta Store - Cart</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/style-cart.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="menu">
+        <div class="menu-toggle">
+          <input type="checkbox" name="" id="" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="brand">
+          <a href="index.html"><h1>Dabta</h1></a>
+        </div>
+        <ul class="menu-list">
+          <li><a href="index.html" class="underline">Home</a></li>
+          <li><a href="product.html" class="underline">Products</a></li>
+          <li><a href="index.html#service" class="underline">Service</a></li>
+          <li><a href="about.html" class="underline">About</a></li>
+        </ul>
+        <ul class="menu-right logged">
+          <li>
+            <a href="index.html#search"><img src="img/icons/search.svg" alt="" class="icon" /></a>
+          </li>
+          <li>
+            <a href="cart.html" class="underline active"><img src="img/icons/shopping-cart.svg" alt="" class="icon" /></a>
+          </li>
+          <li><img src="img/icons/user.svg" alt="" class="icon" /></li>
+        </ul>
+      </nav>
+
+      <section class="breadcrumb">
+        <h1>KERANJANG BELANJA</h1>
+            <p>
+              <span><a href="index.html">Home</a></span> > 
+              <span><a href="product.html">Product</a></span> > 
+              <span><a href="detail_produk.html">Detail Produk</a></span> > 
+              <span><a href="cart.html">Keranjang Belanja</a></span>
+            </p>
+      </section>
+      </section>
+
+      <section class="cart">
+        <div class="cart-left">
+          <img src="img/EmptyCart.png" alt="" class="icon" />
+          <h2>Oh Tidak, Keranjangmu Kosong!</h2>
+          <p>Tambahkan beberapa item yang ingin anda beli ke dalam keranjang anda!</p>
+        </div>
+        <div class="cart-right">
+          <form action="">
+            <label for="voucher"><img src="img/icons/ticket.svg" alt="" /> Voucher</label>
+            <div class="voucher">
+              <input type="text" class="" id="" placeholder="Masukkan kode voucher" />
+              <button class="btn-voucher">Gunakan</button>
+            </div>
+          </form>
+          <div class="harga">
+            <div class="jumlah">
+              <span>Jumlah</span>
+              <span>IDR&nbsp;0.00</span>
+            </div>
+            <div class="jumlah diskon">
+              <span>Diskon</span>
+              <span>0%</span>
+            </div>
+            <hr />
+            <div class="total">
+              <span>Total</span>
+              <span>IDR&nbsp;0.00</span>
+            </div>
+            <button class="btn-pesan"><a href="payment_conf.html"> Beli Sekarang </a></button>
+            <button class="btn-pesan kembali"><a href="detail_produk.html"> Kembali </a></button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="foot-left">
+          <ul>
+            <li class="brand-foot">Dabta</li>
+            <li>dabta_store@gmail.com</li>
+            <li>(0271) 123456</li>
+          </ul>
+        </div>
+        <div class="foot-right">
+          <ul>
+            <li class="bold-foot">Support</li>
+            <li>FAQ's</li>
+            <li>Help Center</li>
+            <li>Support Center</li>
+          </ul>
+          <ul>
+            <li class="bold-foot">Information</li>
+            <li>About Us</li>
+            <li>Join Us</li>
+            <li>Offline Store</li>
+          </ul>
+          <ul>
+            <li class="bold-foot">Social Media</li>
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>Twitter</li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      let menuToggle = document.querySelector(".menu-toggle input");
+      let nav = document.querySelector("nav ul");
+
+      menuToggle.addEventListener("click", function () {
+        nav.classList.toggle("slide");
+      });
+    </script>
+  </body>
+</html>

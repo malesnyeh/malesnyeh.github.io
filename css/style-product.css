@@ -1,0 +1,134 @@
+.breadcrumb h1 {
+  margin-top: 50px;
+}
+
+.products {
+  width: 80%;
+  display: grid;
+  margin: auto;
+  margin-bottom: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: space-evenly;
+}
+
+.teks-produk {
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 50px 0 35px;
+}
+
+.product {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.product p {
+  font-size: 0.8em;
+  padding: 2px 0 8px;
+}
+
+.product img {
+  width: 100px;
+}
+
+.product h4 {
+  font-size: 0.9em;
+}
+
+.product button {
+  width: 150px;
+  height: 25px;
+  margin-top: 8px;
+  background-color: white;
+  border-radius: 50px;
+  color: #0059ff;
+  cursor: pointer;
+  justify-items: center;
+  align-items: center;
+  border: 1px solid #0059ff;
+  margin-bottom: 0;
+}
+
+.product button:hover {
+  font-weight: bold;
+  color: #fff;
+  background-color: #0059ff;
+}
+
+.product a {
+  text-decoration: none;
+  color: #0059ff;
+}
+
+.product button:hover a {
+  color: white;
+}
+
+/* Filter Produk */
+.filter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.filter span {
+  margin-left: 15px;
+}
+
+.filter .saring {
+  display: block;
+  width: 80px;
+  cursor: pointer;
+}
+
+.filter .urut {
+  cursor: pointer;
+}
+
+.filter span img {
+  width: 15px;
+}
+
+/* .urut {
+  text-align: center;
+} */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1em;
+  }
+
+  h2 {
+    font-size: 0.9em;
+  }
+
+  h3 {
+    font-size: 0.8em;
+  }
+
+  h4 {
+    font-size: 0.7em;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  .products {
+    width: 90%;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .product button {
+    width: 90px;
+    font-size: 12px;
+  }
+}

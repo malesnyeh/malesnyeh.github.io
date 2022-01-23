@@ -1,0 +1,334 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Oswald", Helvetica, sans-serif;
+  margin: auto;
+}
+
+/* Container */
+.container {
+  display: grid;
+  /* background-color: red; */
+}
+
+/* Navigation Index */
+.menu {
+  order: -1;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+}
+
+.menu .brand {
+  font-size: 1.3em;
+  color: rgb(26, 25, 25);
+  padding-left: 15px;
+}
+
+.menu ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 5px;
+}
+
+.menu .menu-list {
+  justify-items: center;
+  align-items: center;
+}
+
+.menu .menu-list .login {
+  display: none;
+}
+
+.menu .menu-list .underline,
+.menu .menu-right .underline {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+}
+
+.menu .menu-list .underline::after,
+.menu .menu-right .underline::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s;
+}
+
+.menu .menu-list .underline:hover::after,
+.menu .menu-right .underline:hover::after {
+  width: 100%;
+  /*transition: width .3s;*/
+}
+
+.menu .menu-list .underline:hover,
+.menu .menu-right .underline:hover {
+  font-weight: bold;
+}
+
+.menu .menu-list .active,
+.menu .menu-right .active {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+}
+.menu .menu-list .active::after,
+.menu .menu-right .active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000;
+}
+
+.menu .menu-right {
+  justify-items: end;
+  align-items: center;
+  font-size: 1em;
+  padding: 10px;
+}
+
+.menu .menu-right li {
+  cursor: pointer;
+}
+
+.menu a {
+  /* display: block; */
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+  font-size: 0.9em;
+}
+
+.menu .menu-right .start-nav {
+  background-color: orange;
+  border: none;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.8s, color 0.3s 0.3s;
+}
+
+.menu .menu-right .start-nav:hover {
+  box-shadow: 300px 0 0 0 rgba(0, 0, 0, 0.2) inset, -300px 0 0 0 rgba(0, 0, 0, 0.2) inset;
+  font-weight: bold;
+}
+
+.menu .menu-right .get {
+  color: white;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  justify-items: center;
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 999;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -6px;
+  top: -4px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: black;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+/* Hamburger Menu Animation */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0; /* membuat poros di ujung garis kiri */
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%; /* membuat poros di ujung garis kanan */
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: white;
+  transform: rotate(45deg) translate(-1px, -1px); /*agar sejajar*/
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+  background-color: white;
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+/* Navigation Selain Index */
+.menu .logged {
+  justify-items: end;
+  padding: 10px 13.5px;
+  box-sizing: border-box;
+}
+
+.menu-right img {
+  width: 20px;
+  justify-items: start;
+  margin: 7px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 50px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 35px 0;
+  display: grid;
+  grid-template-areas: "foot-left foot-right foot-right foot-right";
+}
+
+.footer ul {
+  list-style: none;
+  font-size: 0.8em;
+  color: #aaa9a9;
+}
+
+.foot-left {
+  display: grid;
+  grid-area: foot-left;
+  align-items: center;
+  justify-items: center;
+}
+
+.foot-left .brand-foot {
+  font-weight: bold;
+  color: white;
+  font-size: 1.8em;
+}
+
+.foot-right {
+  display: grid;
+  grid-area: foot-right;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.foot-left ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+}
+
+.foot-right ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+}
+
+.foot-right .bold-foot {
+  font-size: 1em;
+  color: white;
+  font-weight: bold;
+}
+
+/* Responsive Breakpoint Nav Index */
+@media (max-width: 1024px) {
+  /* Menu */
+  .menu {
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+  .menu .menu-right {
+    justify-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Menu Hamburger*/
+  .menu {
+    order: -1;
+    grid-template-columns: 1fr 1fr;
+    position: fixed;
+    background-color: white;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.3);
+    width: 100%;
+  }
+  .menu .menu-list .underline,
+  .menu .menu-right .underline {
+    color: #fff;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+  /* .menu .menu-right {
+      margin-top: 40000px;
+      background-color: fuchsia;
+    } */
+  .menu ul {
+    display: flex;
+    position: absolute;
+    right: -100%;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #000;
+    z-index: 1;
+    /* transform: translateX(-100%); */
+    transition: all 1s;
+    opacity: 0;
+  }
+  nav ul.slide {
+    opacity: 1;
+    right: 0;
+    /* transform: translateX(0); */
+  }
+  .menu .brand {
+    order: -1;
+  }
+  .menu .menu-list .login {
+    display: grid;
+  }
+  /*Menu Hover*/
+  .menu .menu-list .underline,
+  .menu .menu-right .underline {
+    color: #fff;
+    /* background-color: orange; */
+    width: 100%;
+  }
+
+  .menu .menu-list .underline:hover::after,
+  .menu .menu-right .underline:hover::after {
+    background: #fff;
+  }
+}
+
+/* Responsive Breakpoint Nav Selain Index */

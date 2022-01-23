@@ -1,0 +1,157 @@
+/* HALAMAN ABOUT */
+.about-bg {
+  display: grid;
+}
+
+.breadcrumb h1 {
+  margin-top: 50px;
+}
+
+/* Intro */
+@import url("https://fonts.googleapis.com/css?family=Special+Elite");
+
+.intro {
+  display: grid;
+  width: 80%;
+  margin: auto;
+}
+
+.intro p {
+  text-align: center;
+  margin: 30px 0 30px 0;
+}
+
+.dabta {
+  font-size: 100px;
+  margin-top: 50px;
+  text-align: center;
+  font-family: "Akira", "Poppins", sans-serif;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
+
+blockquote {
+  font-size: 1.2em;
+  width: 60%;
+  margin: 20px auto 50px;
+  font-family: Open Sans;
+  font-style: italic;
+  color: #555555;
+  padding: 1.2em 30px 1.2em 75px;
+  border-left: 8px solid #78c0a8;
+  line-height: 1.6;
+  position: relative;
+  background: #ededed;
+  text-align: center;
+}
+
+blockquote::before {
+  font-family: Arial;
+  content: "\201C";
+  color: #788bc0;
+  font-size: 4em;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+}
+
+blockquote::after {
+  content: "";
+}
+
+blockquote span {
+  display: block;
+  color: #333333;
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* History */
+.history {
+  padding: 5px;
+  border: 2px solid orange;
+  box-sizing: border-box;
+  display: grid;
+  width: 80%;
+  margin: auto;
+  grid-template-columns: 1fr 1fr;
+  /* gap: 20px; */
+}
+
+.history h2 {
+  grid-column: 1 / -1;
+  text-align: center;
+
+  margin-bottom: 20px;
+}
+
+.history .his-left {
+  padding-right: 10px;
+}
+
+/* Gallery */
+.gallery {
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 5px;
+}
+
+.gallery h2 {
+  /* grid-column-start: 1;
+      grid-column-end: -1; */
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+/* Alamat */
+.alamat {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+.alamat iframe {
+  margin-top: 20px;
+  width: 600px;
+  height: 450px;
+  border: 0;
+}
+
+/* Responsive Breakpoint About */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .alamat iframe {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .dabta {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 500px) {
+  .alamat {
+    width: 100%;
+  }
+
+  .alamat iframe {
+    width: 350px !important;
+    height: 250px;
+  }
+
+  .dabta {
+    font-size: 50px !important;
+  }
+}

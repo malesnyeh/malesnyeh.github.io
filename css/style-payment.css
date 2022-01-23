@@ -1,0 +1,167 @@
+.breadcrumb {
+  margin: 50px;
+  text-align: center;
+}
+
+.pay {
+  display: grid;
+  width: 80%;
+  margin: auto;
+  grid-template-columns: 1.5fr 1fr;
+}
+
+.pay-left h3,
+.pay-right h3 {
+  text-align: center;
+}
+
+.pay-right {
+  margin-left: 50px;
+}
+
+.metode {
+  font-family: "Poppins", Helvetica, sans-serif;
+  border: 1px solid orange;
+  height: 50px;
+  line-height: 50px;
+  margin: 20px 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.metode:hover {
+  font-weight: bold;
+}
+
+.metode input[type=radio]:checked~label {
+  font-weight: bold;
+}
+
+/* Kanan */
+.detail {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.detail div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* .detail div {
+} */
+
+.detail div label:nth-child(1) {
+  justify-items: start;
+}
+
+.detail div label:nth-child(2) {
+  justify-items: end;
+  text-align: right;
+}
+
+.harga {
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid orange;
+  width: 80%;
+  margin: auto;
+  display: grid;
+  padding: 20px;
+  align-items: center;
+}
+
+.jumlah {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 10px;
+}
+
+.total {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.jumlah span:nth-child(1),
+.total span:nth-child(1) {
+  justify-content: start;
+}
+
+.jumlah span:nth-child(2),
+.total span:nth-child(2) {
+  justify-content: end;
+  text-align: right;
+}
+
+hr {
+  width: 100%;
+  margin: auto;
+}
+
+.check p {
+  font-size: 0.8em;
+  display: grid;
+  grid-template-columns: 0.1fr 1fr;
+  align-items: stretch;
+  margin-bottom: 5px;
+}
+
+input[type=checkbox] {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.btn-lanjut {
+  margin-top: 5px;
+}
+
+.btn-lanjut,
+.btn-kembali {
+  border-radius: 5px;
+  border: 1px solid orange;
+  background-color: white;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.btn-lanjut a,
+.btn-kembali a {
+  color: orange;
+  text-decoration: none;
+  display: block;
+}
+
+.btn-lanjut:hover a,
+.btn-lanjut:hover,
+.btn-kembali:hover a,
+.btn-kembali:hover {
+  color: white;
+  background-color: orange;
+}
+
+
+/* Responsive Breakpoint */
+@media (max-width: 1024px) {
+  .pay {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .judul h1 {
+    margin-top: 60px;
+  }
+
+  .pay-right {
+    margin-left: 0;
+  }
+
+  .pay-right h3 {
+    margin-top: 30px;
+  }
+}

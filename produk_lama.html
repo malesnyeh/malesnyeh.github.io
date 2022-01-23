@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dabta Store - Detail Produk</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/style-detail_produk.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="menu detail-produk">
+        <div class="menu-toggle">
+          <input type="checkbox" name="" id="" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="brand">
+          <a href="index.html"><h1>Dabta</h1></a>
+        </div>
+        <ul class="menu-list">
+          <li><a href="index.html" class="underline">Home</a></li>
+          <li><a href="product.html" class="underline">Products</a></li>
+          <li><a href="#service" class="underline">Service</a></li>
+          <li><a href="#about" class="underline">About</a></li>
+        </ul>
+        <ul class="menu-right logged">
+          <li>
+            <a href="index.html#search"><img src="img/icons/search.svg" alt="" class="icon" /></a>
+          </li>
+          <li>
+            <a href="cart.html"><img src="img/icons/shopping-cart.svg" alt="" class="icon" /></a>
+          </li>
+          <li><img src="img/icons/user.svg" alt="" class="icon" /></li>
+        </ul>
+      </nav>
+
+      <section class="breadcrumb">
+        <h1>DETAIL PRODUK</h1>
+            <p>
+              <span><a href="index.html">Home</a></span> > 
+              <span><a href="product.html">Product</a></span> > 
+              <span><a href="detail_produk.html">Detail Produk</a></span>
+            </p>
+      </section>
+
+      <section class="hero">
+        <div class="hero-left">
+          <h1 class="hp-size">Oppo F9</h1>
+          <img src="img/oppo_f9.png" alt="" />
+          <p class="hp-size">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit sit quaerat vel similique consectetur repudiandae, deleniti non sed dicta illum rem, veniam numquam possimus? Assumenda quasi tenetur error quidem incidunt.
+          </p>
+          <h3 class="hp-size">IDR 1.490.000</h3>
+          <div class="btn-right hp-size">
+            <a href="payment_conf.html"><button>Buy Now</button></a>
+            <a href="cart.html"><button>Add to Cart</button></a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <h1>Oppo F9</h1>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit sit quaerat vel similique consectetur repudiandae, deleniti non sed dicta illum rem, veniam numquam possimus? Assumenda quasi tenetur error quidem incidunt.</p>
+          <div class="card">
+            <button onclick="decrement()" class="qty">-</button>
+            <h4 id="root"></h4>
+            <button onclick="increment()" class="qty">+</button>
+          </div>
+          <h3 id="harga">0</h3>
+          <div class="btn-right">
+            <a href="payment_conf.html"><button class="cart">Buy Now</button></a>
+            <a href="cart.html"><button class="cart">Add to Cart</button></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="desc">
+        <div class="desc-bg">
+          <h2>Spesification</h2>
+          <table border="1">
+            <tr>
+              <td>Screen Size</td>
+              <td>6.3 inches, 97.4 cm2 (84.0% screen-to-body ratio)</td>
+            </tr>
+            <tr>
+              <td>Dimension</td>
+              <td>156.7 x 74 x 8mm</td>
+            </tr>
+            <tr>
+              <td>Network</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Weight</td>
+              <td>169g</td>
+            </tr>
+            <tr>
+              <td>Processor</td>
+              <td>Octa Core</td>
+            </tr>
+            <tr>
+              <td>Camera</td>
+              <td>Quad camera 48MP, f/1.8, 26mm (wide); 8MP, f/2.2, 118˚ (ultrawide); 2MP, f/2.4, (macro); 2MP, f/2.4, (depth)</td>
+            </tr>
+            <tr>
+              <td>Front Camera</td>
+              <td>6GB RAM + 128GB ROM</td>
+            </tr>
+            <tr>
+              <td>Battery</td>
+              <td>3500mAh (Fast Charging 18w)</td>
+            </tr>
+            <tr>
+              <td>Memory</td>
+              <td>6GB RAM + 128GB ROM</td>
+            </tr>
+            <tr>
+              <td>Sound</td>
+              <td>Loudspeaker Yes</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="foot-left">
+          <ul>
+            <li class="brand-foot">Dabta</li>
+            <li>dabta_store@gmail.com</li>
+            <li>(0271) 123456</li>
+          </ul>
+        </div>
+        <div class="foot-right">
+          <ul>
+            <li class="bold-foot">Support</li>
+            <li>FAQ's</li>
+            <li>Help Center</li>
+            <li>Support Center</li>
+          </ul>
+          <ul>
+            <li class="bold-foot">Information</li>
+            <li>About Us</li>
+            <li>Join Us</li>
+            <li>Offline Store</li>
+          </ul>
+          <ul>
+            <li class="bold-foot">Social Media</li>
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>Twitter</li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      let menuToggle = document.querySelector(".menu-toggle input");
+      let nav = document.querySelector("nav ul");
+
+      menuToggle.addEventListener("click", function () {
+        nav.classList.toggle("slide");
+      });
+
+      // qty input
+      let data = 0;
+        document.getElementById("root").innerText=data;
+        document.getElementById("harga").innerText=harga;
+        function decrement() {
+          let harga = (harga)=>{
+          return new Intl.NumberFormat("id-ID", {
+            style: "currency",
+            currency: "IDR"
+          }).format(harga);
+        }
+        if (data === null) {
+              document.getElementById("root").innerText=data;
+              document.getElementById("harga").innerText=harga(0);
+              console.log(harga(0));
+            }
+            if (data > 0) {
+              data = data-1;
+              document.getElementById("root").innerText=data;
+              document.getElementById("harga").innerText=harga(1900000 * data);
+            }
+        }
+        function increment() {
+          let harga = (harga)=>{
+          return new Intl.NumberFormat("id-ID", {
+            style: "currency",
+            currency: "IDR"
+          }).format(harga);
+        }
+            if (data === null) {
+              document.getElementById("root").innerText=data;
+              document.getElementById("harga").innerText=harga(0);
+            }
+            data = data+1;
+            document.getElementById("root").innerText=data;
+            document.getElementById("harga").innerText=harga(1900000 * data);
+        }
+    </script>
+  </body>
+</html>

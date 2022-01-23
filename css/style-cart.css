@@ -1,0 +1,171 @@
+/* Halaman Cart */
+.cart {
+  display: grid;
+  grid-template-columns: 1.38fr 1fr;
+}
+
+.breadcrumb {
+  text-align: center;
+  margin: 50px 0 50px;
+}
+
+/* Cart Kiri */
+.cart-left {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.cart-left img {
+  margin: auto;
+  width: 350px;
+}
+
+/* Cart Kanan */
+.cart-right img {
+  width: 15px;
+}
+
+.cart-right form {
+  width: 70%;
+  margin: auto;
+  display: grid;
+  align-content: center;
+}
+
+.cart-right .voucher {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  box-sizing: border-box;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.cart-right input {
+  align-content: center;
+  padding: 12px 20px;
+  border: 1px solid orange;
+  border-radius: 5px;
+  box-sizing: border-box;
+  /* margin: auto; */
+}
+
+.cart-right .btn-voucher {
+  /* margin: auto; */
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  color: orange;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 12px 20px;
+  border: 1px solid orange;
+  box-sizing: border-box;
+}
+
+.cart-right .btn-voucher:hover {
+  background-color: orange;
+  color: white;
+}
+
+.cart-right label {
+  font-weight: bold;
+}
+
+/* Jumlah dan Total Harga */
+.harga {
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid orange;
+  width: 70%;
+  margin: auto;
+  display: grid;
+  padding: 20px;
+  align-items: center;
+}
+
+.jumlah {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 10px;
+}
+
+.total {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.jumlah span:nth-child(1),
+.total span:nth-child(1) {
+  justify-content: start;
+}
+
+.jumlah span:nth-child(2),
+.total span:nth-child(2) {
+  justify-content: end;
+  text-align: right;
+}
+
+hr {
+  width: 100%;
+  margin: auto;
+}
+
+.btn-pesan {
+  border-radius: 5px;
+  border: 1px solid orange;
+  background-color: white;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-pesan a {
+  color: orange;
+  text-decoration: none;
+  display: block;
+}
+
+.btn-pesan:hover a,
+.btn-pesan:hover {
+  color: white;
+  background-color: orange;
+}
+
+.kembali {
+  margin-top: 10px;
+}
+
+/* Responsive Breakpoint */
+@media (max-width: 1024px) {
+  .cart {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .judul h1 {
+    margin-top: 60px;
+  }
+
+  .cart-right {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .cart-right .voucher {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-right .btn-voucher {
+    margin-top: -10px;
+  }
+}
