@@ -1,19 +1,18 @@
 /* Font Face */
 @font-face {
-  font-family: 'Poppins';
-  src: url('../font/Poppins/Poppins-Regular.otf') format('truetype'),
-    url('../font/Poppins/Poppins-Light.otf') format('truetype');
+  font-family: "Poppins";
+  src: url("../font/Poppins/Poppins-Regular.otf") format("truetype"),
+    url("../font/Poppins/Poppins-Light.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Akira';
-  src: url('../font/Akira\ Expanded\ Demo.woff') format('woff');
+  font-family: "Akira";
+  src: url("../font/Akira\ Expanded\ Demo.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
-
 
 * {
   margin: 0;
@@ -207,18 +206,18 @@ body {
   /* membuat poros di ujung garis kanan */
 }
 
-.menu-toggle input:checked~span:nth-child(2) {
+.menu-toggle input:checked ~ span:nth-child(2) {
   background-color: white;
   transform: rotate(45deg) translate(-1px, -1px);
   /*agar sejajar*/
 }
 
-.menu-toggle input:checked~span:nth-child(4) {
+.menu-toggle input:checked ~ span:nth-child(4) {
   background-color: white;
   transform: rotate(-45deg) translate(-1px, 0);
 }
 
-.menu-toggle input:checked~span:nth-child(3) {
+.menu-toggle input:checked ~ span:nth-child(3) {
   opacity: 0;
   transform: scale(0);
 }
@@ -235,7 +234,6 @@ body {
   justify-items: start;
   margin: 7px;
 }
-
 
 /* Breadcrumb */
 .breadcrumb {
@@ -264,7 +262,6 @@ button {
 .breadcrumb p span:hover a {
   font-weight: bold;
 }
-
 
 /* Footer */
 .footer {
@@ -330,7 +327,6 @@ button {
 
 /* Responsive Breakpoint Nav Index */
 @media (max-width: 1024px) {
-
   /* Menu */
   .menu {
     grid-template-columns: 1fr 3fr 1fr;
@@ -342,7 +338,6 @@ button {
 }
 
 @media (max-width: 768px) {
-
   /* Menu Hamburger*/
   .menu {
     order: -1;
@@ -421,9 +416,92 @@ button {
 }
 
 @media (max-width: 768px) {
-
   /* Footer */
   .footer {
     font-size: 12px;
+  }
+}
+
+/* Tambahan Untuk slides */
+.slides {
+  width: 100%;
+  position: relative;
+}
+
+.slides .slide {
+  display: none;
+}
+
+.slides .slide img {
+  width: 100%;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.slides .navigation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.slides .navigation .prev,
+.slides .navigation .next {
+  cursor: pointer;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.2);
+  user-select: none;
+  transition: 0.6s ease;
+}
+
+.slides .navigation .prev:hover,
+.slides .navigation .next:hover {
+  background: rgba(0, 0, 0, 1);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 992px) {
+  .slides .navigation .prev,
+  .slides .navigation .next {
+    font-size: 18px;
+    padding: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slides .navigation .prev,
+  .slides .navigation .next {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .slides .navigation .prev,
+  .slides .navigation .next {
+    font-size: 12px;
+    padding: 7px;
+  }
+}
+
+@media (max-width: 360px) {
+  .slides .navigation .prev,
+  .slides .navigation .next {
+    font-size: 11px;
+    padding: 6px;
   }
 }
