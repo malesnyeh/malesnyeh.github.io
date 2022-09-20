@@ -10,8 +10,20 @@
   </head>
   <body>
     <div class="container" id="home">
-      <header class="header">
-        <img src="img/redmi.jpeg" alt="" />
+      <header class="header slides">
+        <div class="slide">
+          <img src="img/redmi.jpeg" alt="" />
+        </div>
+        <div class="slide">
+          <img src="img/header/vivoxs.jpg" alt="" />
+        </div>
+        <div class="slide">
+          <img src="img/header/samsu.jpg" alt="" />
+        </div>
+        <div class="navigation">
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(-1)">&#10095;</a>
+        </div>
       </header>
 
       <nav class="menu">
@@ -34,7 +46,13 @@
         <ul class="menu-right">
           <li>
             <button class="start-nav">
-              <a href="" class="get"><img src="img/icons/user.svg" alt="" style="float: left" /><a href="" style="line-height: 35px">Tamu</a></a>
+              <a href="" class="get"
+                ><img src="img/icons/user.svg" alt="" style="float: left" /><a
+                  href=""
+                  style="line-height: 35px"
+                  >Tamu</a
+                ></a
+              >
             </button>
           </li>
         </ul>
@@ -84,8 +102,10 @@
       </section>
 
       <section class="promo">
-        <div class="img-promo"><img class="diskon1" src="img/sale-small.png" alt="" />
-          <img class="diskon2" src="img/Diskon.png" alt=""></div>
+        <div class="img-promo">
+          <img class="diskon1" src="img/sale-small.png" alt="" />
+          <img class="diskon2" src="img/Diskon.png" alt="" />
+        </div>
         <div class="div-promo">
           <button class="btn-promo"><a href="">Lihat Semua Promo</a></button>
         </div>
@@ -97,22 +117,34 @@
           <div class="service">
             <div class="icon">📲</div>
             <h3>Quick Order</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam reiciendis quam nostrum error consectetur provident.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+              reiciendis quam nostrum error consectetur provident.
+            </p>
           </div>
           <div class="service">
             <div class="icon">🚀</div>
             <h3>Fast Delivery</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam reiciendis quam nostrum error consectetur provident.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+              reiciendis quam nostrum error consectetur provident.
+            </p>
           </div>
           <div class="service">
             <div class="icon">🎧</div>
             <h3>24x7 Support</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam reiciendis quam nostrum error consectetur provident.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+              reiciendis quam nostrum error consectetur provident.
+            </p>
           </div>
           <div class="service">
             <div class="icon">💰</div>
             <h3>Low Price</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam reiciendis quam nostrum error consectetur provident.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+              reiciendis quam nostrum error consectetur provident.
+            </p>
           </div>
         </section>
       </div>
@@ -132,7 +164,14 @@
           <input type="email" class="full-input" id="email" required />
 
           <label for="message">Message</label>
-          <textarea name="" class="full-input" id="message" cols="30" rows="10" required></textarea>
+          <textarea
+            name=""
+            class="full-input"
+            id="message"
+            cols="30"
+            rows="10"
+            required
+          ></textarea>
 
           <button class="btn-contact">Submit</button>
         </form>
@@ -177,5 +216,6 @@
         nav.classList.toggle("slide");
       });
     </script>
+    <script src="js/slide.js"></script>
   </body>
 </html>
